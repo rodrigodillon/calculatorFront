@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from "axios";
 import styled from 'styled-components';
-import { flushSync } from 'react-dom';
 
 const Container = styled.div`
   display: flex;
@@ -64,11 +63,6 @@ function Calculadora() {
         .then((response) => {
           setResult({result:response.data.result})
       });
-  }
-
-  function handleSubmit() {
-    setValue({...value,typeCalculator:1})
-    post()
   }
   
   return (
